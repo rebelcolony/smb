@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @post.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @post.body %>
+</p>
+
+<p>
+  <b>Post image file name:</b>
+  <%= @post.post_image_file_name %>
+</p>
+
+<p>
+  <b>Post image content type:</b>
+  <%= @post.post_image_content_type %>
+</p>
+
+<p>
+  <b>Post image file size:</b>
+  <%= @post.post_image_file_size %>
+</p>
+
+<p>
+  <b>Post image updated at:</b>
+  <%= @post.post_image_updated_at %>
+</p>
+
+<p>
+  <b>Video code:</b>
+  <%= @post.video_code %>
+</p>
+
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
