@@ -17,6 +17,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem "carrierwave"
+gem "rmagick"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -30,7 +32,10 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-group :test do
+group :test, :development do
   # Pretty printed test output
   gem 'turn', '0.8.2', :require => false
+  gem 'capybara'
+  gem 'launchy' # for save_and_open_page method of Capybara
+  gem 'factory_girl_rails'
 end

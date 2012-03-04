@@ -1,7 +1,10 @@
 require 'test_helper'
 
 class PostTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  
+  test "post should be valid" do
+    post = Factory(:post)
+    assert post.valid?
+   end
+   
 end

@@ -1,9 +1,12 @@
 class PostsController < ApplicationController
+  
+  layout "home", :only => :index
+  
   # GET /posts
   # GET /posts.json
   def index
     @posts = Post.all
-
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
@@ -80,4 +83,9 @@ class PostsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  protected
+
+  
 end
+
