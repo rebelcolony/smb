@@ -1,16 +1,32 @@
+<% if admin? %>
+  <%= link_to 'New Post', new_post_path, :class => "btn" %>
+<% end %>  
 
 <% @posts.each do |post| %>
   <div class="post">
-    <div class="media">
-      <%= image_tag post.image_url(:thumb).to_s %>
-      <%= post.video_code %>
-    </div><!-- END .media -->
+    <% if post.image? %>
+      <div class="media media_img">
+        <%= link_to (image_tag post.image_url(:thumb).to_s), post %>
+      </div>
+    <% elsif post.video_code? %> 
+      <div class="media media_video">
+        <%= link_to image_tag(post.youtube_image, :width => 200, :class => "yt_img" ), post.youtube_src if post.video_code? %>
+      </div>  
+    <% end %>  
+    
     <div class="text">
-      <h2><%= link_to post.title, post %></h2>
-      <%= post.body %>
-      <%= link_to 'Edit', edit_post_path(post) %>
-      <%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %>
+      <h2>
+        <%= link_to post.title, post %> 
+        <small>Posted <%= distance_of_time_in_words_to_now(post.created_at) %> ago</small>
+      </h2>
+      <%= truncate(post.body, length: 645, separator: ' ')  %>
+      <%= link_to "Read more", post %>
+      <% if admin? %>
+        <div>
+          <%= link_to 'Edit', edit_post_path(post), id: "edit_post", class: "btn" %>
+          <%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete, id: "destroy_post", class: "btn"  %>
+        </div>  
+      <% end %>  
     </div><!-- END .text -->
   </div><!-- END .post -->
 <% end %>
-<%= link_to 'New Post', new_post_path %>

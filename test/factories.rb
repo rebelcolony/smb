@@ -4,8 +4,5 @@ FactoryGirl.define do
     body 'mario body'
   end
   
-  factory :admin do
-    password "secret"
-  end
   
 end

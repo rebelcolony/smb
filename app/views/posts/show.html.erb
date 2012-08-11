@@ -1,16 +1,18 @@
-
-
-<p>
-  <b>Title:</b>
-  <%= @post.title %>
-</p>
-
-<p>
-  <b>Body:</b>
+<h2><%= @post.title %></h2>
+<% if @post.image? %>
+  <div class="media media_img">
+    <%= image_tag @post.image_url(:thumb).to_s %>
+  </div>
+<% end %>  
+<div id="show_text">
   <%= @post.body %>
+</div>
+
+
+<p>
+  <% if admin? %>
+    <%= link_to 'Edit', edit_post_path(@post) %> |
+    <%= link_to 'Destroy', @post, confirm: 'Are you sure?', method: :delete, id: "destroy_post" %> |
+  <% end %>  
+  <%= link_to 'Back', posts_path %>
 </p>
-
-
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>

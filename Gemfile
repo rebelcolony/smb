@@ -19,6 +19,7 @@ end
 gem 'jquery-rails'
 gem "carrierwave"
 gem "rmagick"
+gem 'capistrano'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -38,4 +39,10 @@ group :test, :development do
   gem 'capybara'
   gem 'launchy' # for save_and_open_page method of Capybara
   gem 'factory_girl_rails'
+  gem 'database_cleaner'
+end
+
+group :production do
+  gem 'pg'
+  gem 'unicorn'
 end
