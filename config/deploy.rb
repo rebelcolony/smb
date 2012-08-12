@@ -4,7 +4,7 @@ server "69.164.197.119", :web, :app, :db, primary: true
 
 set :application, "smb"
 set :user, "deployer"
-set :deploy_to, "/var/www/apps/#{application}"
+set :deploy_to, "/home/deployer/apps/#{application}"
 set :deploy_via, :remote_cache
 set :use_sudo, false
 
