@@ -16,7 +16,7 @@ set :branch, "master"
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 ssh_options[:port] = 8888 
-ssh_options[:keys] = %w(/Users/kevin/.ssh)
+ssh_options[:keys] = %w(/Users/kevin/.ssh/id_rsa)
 
 after "deploy", "deploy:cleanup" # keep only the last 5 releases
 
