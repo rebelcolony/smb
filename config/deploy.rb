@@ -2,6 +2,8 @@ require "bundler/capistrano"
 
 server "69.164.197.119", :web, :app, :db, primary: true
 
+set :app_domain, "http://www.smb45.com"
+
 set :application, "smb"
 set :user, "deployer"
 set :deploy_to, "/home/deployer/apps/#{application}"
