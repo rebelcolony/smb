@@ -21,7 +21,6 @@
   production:
     adapter: postgresql 
     encoding: unicode 
-    database: smb_production 
-    pool: 5 
-    username: smb
+    database: smb
+    username: deployer
     password: secret
