@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Super Mario Balotelli 45</title>
+  <title>SMB45 - Mario Balotelli Fan Site</title>
+  <meta name="description" content="Fan Site for Mario Balotelli, latest news articles and videos
+  about Mario Balotelli" />
+  <meta name="author" content="kevin bett for rebelcolony" />
+  <meta name="keywords" content="Mario Balotelli, Super Mario Balotelli, SMB45" />
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'>
+  <!--[if IE]>
+  	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>
 <body>
   <div id="wrapper">
-    <div id="header">
-      <%= link_to image_tag("smb_logo.png"), :root %> 
-    </div>
+    <header>
+      <h1 class="hidden">Mario Balotelli</h1>
+      <%= link_to image_tag("smb_logo.png", :alt => "Mario Balotelli Logo - SMB 45"), :root %> 
+    </header>

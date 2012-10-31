@@ -7,6 +7,46 @@ $yellow:#FBAF41;
 
 // Global Styles
 //==================================================
+.poster {
+  position:absolute;
+  top:60px;
+  left:100px;
+  background:rgba(0, 0, 0, 0.4);
+  padding:10px;
+  width:300px;
+  z-index:1;
+  line-height:1.2em;
+  -webkit-border-radius:6px;
+  -moz-border-radius:6px;
+  border-radius:6px;
+  
+  & p {
+    margin:0 0 10px 0;
+  }
+  
+}
+
+.poster_left {
+  top:60px;
+  left:100px;
+}
+
+.poster_right {
+  top:60px;
+  left:511px;
+}
+
+
+p {
+  margin:0;
+  padding:0;
+}
+
+
+.hidden {
+  display:none;
+}
+
 .f_left {
   float:left;
 }
@@ -61,7 +101,7 @@ body {
   min-height:800px;
 }  
 
-#header {
+header {
   overflow:hidden;
   
 }
