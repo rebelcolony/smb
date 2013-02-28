@@ -104,6 +104,27 @@ body {
 
 header {
   overflow:hidden;
+  margin-bottom: 10px;
+
+  a {
+    width: 225px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  h1.brand {
+    color: rgb(70, 70, 70);
+    font-family: 'Open Sans', sans-serif;
+    background: -webkit-linear-gradient(top, #eeeeee 0%,#cfcfcf 100%); /* Chrome10+,Safari5.1+ */
+    border-radius: 4px;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    display: inline;
+    margin-left: 299px;
+    padding: 2px 4px 2px 4px;
+    width: 343px;
+    text-align: center;
+  }
   
 }
 
