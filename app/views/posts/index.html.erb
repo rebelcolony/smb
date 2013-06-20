@@ -20,7 +20,6 @@
         <small>Posted <%= distance_of_time_in_words_to_now(post.published) %> ago</small>
       </h2>
       <%= truncate(post.body, length: 645, separator: ' ')  %>
-      <%= link_to "Read more", post %>
       <% if admin? %>
         <div>
           <%= link_to 'Edit', edit_post_path(post), id: "edit_post", class: "btn" %>
